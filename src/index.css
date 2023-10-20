@@ -1,13 +1,41 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+  font-family: "Quicksand";
+  color: #333;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  padding: 15px;
 }
+.navbar{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px 60px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar > h1{
+  color: #f1356d ;
+}
+.links{
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.links a{
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 2px;
+}
+.links a:hover{
+  color: #f1356d;
+}
+.content{
+  max-width: 70%;
+  padding: 10px;
+  margin: 30px auto;
+}
+

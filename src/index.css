@@ -38,6 +38,9 @@ body{
   padding: 10px;
   margin: 30px auto;
 }
+.blogsList{
+  margin-bottom: 25px;
+}
 
 .blogPreview{
   border-bottom: 1px solid #e8e8e8;
@@ -52,6 +55,7 @@ body{
 
 .blogPreview > h2{
   font-size: 20px;
+  color: #f1356d
 }
 
 .blogPreview > p {

@@ -1,16 +1,27 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
+import Create from './Create';
 
 function App() {
   //js code goes here or in the return below within curly braces
   //you can't put objects and boolean values inside the curly braces though
   return (
-    <div className="App">
-      <Navbar />
+    <Router>
+      <div className="App">
+        <Navbar />
       <div className="content">
-        <Home/>
+        <Switch>
+          <Route exact path="/">  
+            <Home/>
+          </Route>
+          <Route path="/create">  
+            <Create/>
+          </Route>
+        </Switch>
       </div>
     </div>
+    </Router>
   );
 }
 

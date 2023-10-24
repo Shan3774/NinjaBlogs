@@ -6,8 +6,10 @@ const useFetch = (url) => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
+            const abortCont = new AbortController();
+
             setTimeout(()=>{
-                fetch(url)
+                fetch(url, {signal: abortCont.signal})
             //Fetch is asyncronous so use .then but useEffect won't take async functions
             .then(res => { 
                 if(!res.ok){
@@ -22,10 +24,16 @@ const useFetch = (url) => {
                 setError(null)
             })//make sure your use conditional rendering since rendering will preceed the result of these asyncronous processes
             .catch(e => {
-                setIsPending(false)
-                setError(e.message)
+                if(e.name === "AbortError"){
+                    console.log('Fetch aborted.')
+                }else{
+                    setIsPending(false)
+                    setError(e.message)
+                }
             })
-            }, 1000)
+            }, 500)
+
+            return () => abortCont.abort() ;
         }, [url])
 
     return {data, isPending, error}

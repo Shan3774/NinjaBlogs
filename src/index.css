@@ -37,7 +37,13 @@ body{
   max-width: 70%;
   padding: 10px;
   margin: 30px auto;
+  display: flex;
+  justify-content: center;
 }
+.home{
+  width: 100%;
+}
+
 .blogsList{
   margin-bottom: 25px;
 }
@@ -53,11 +59,66 @@ body{
   cursor: pointer;
 }
 
-.blogPreview > h2{
+.blogPreview h2{
   font-size: 20px;
   color: #f1356d
 }
 
 .blogPreview > p {
   font-size: 14.5px;
+}
+
+.blogPreview a{
+  text-decoration: none;
+}
+
+.blogDetails h2{
+  color: #f1356d;
+}
+
+.blogDetails p{
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+
+.createBlog{
+  width: 400px;
+}
+
+.createBlog h3{
+  align-self: center;
+  text-align: center;
+  color: #f1356d;
+  margin-top: 20px;
+  font-size: 21px;
+}
+
+.createBlog form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.createBlog label{
+  float: left;
+  margin-top: 10px;
+}
+
+.createBlog input, textarea, select{
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 2px;
+  padding: 7px;
+}
+
+.createBlog button{
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  align-self: center;
+  background-color: #f1356d;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-top: 15px;
 }
